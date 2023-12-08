@@ -3,3 +3,11 @@ GET http://localhost:3000/example
 
 ###
 GET http://localhost:3000/example/15
+
+###
+POST http://localhost:3000/example
+
+{
+    "name": "Pramudi",
+    "sendingTo":"My admirer"
+}
