@@ -1,41 +1,48 @@
-# Basic-REST-API
-![image](https://github.com/MKPNJoanne/Basic-REST-API/assets/97240800/cfa16fc6-7edd-432a-b757-6bfcfc0d51ca)
 
-**REST API = Representational State Transfer**
-*The server responds to CREATE READ UPDATE DELETE requests in a standard way
-*For example, https://github.com/users
-*In this URL, USERS represents the **resource** that the Server is exposing
-*Uses http actions like GET POST PUT DELETE 
+**Basic-REST-API: Learning the Fundamentals**
+![image](https://github.com/MKPNJoanne/Basic-REST-API/assets/97240800/6009bd1b-f332-4e1e-8300-22389fcab9e0)
 
-*https://github.com/users => GETs a list of the resources | acts on the entire resource
+This  provides a comprehensive overview of REST APIs (Representational State Transfer), By understanding REST principles, you can effectively interact with various web services and build robust applications.
 
-*https://github.com/users => POST action used to create a new resource | acts on the entire resource
+**What is a REST API?**
 
-*https://github.com/users/1 => GETs the resource with a given ID | Acts on a single resource
+A REST API is a standardized way for web applications to communicate with each other. It uses the HTTP protocol and familiar verbs like GET, POST, PUT, and DELETE to perform actions on resources. Think of it as a waiter taking your order (creating or updating a resource) or bringing you your food (retrieving a resource).
 
-*https://github.com/users/1 => PUT update the resource with the gievn ID | Acts on a sngle resource
-(PUT corresponds with UPDATE instead of creating this update, an existing)
+**Understanding the Basics:**
 
-*https://github.com/users/1 => DELETEs the resources with the given ID | Acts on single resources
+**Resources**: Represent specific entities like users, products, orders, etc., accessible through URLs.
+-**HTTP** verbs: Used to perform actions on resources:
+  -**GET**: Retrieves information about a resource.
+  -**POST**: Creates a new resource.
+  -**PUT**: Updates an existing resource.
+  -**DELETE**: Deletes a resource.
+**Status codes**: Communicate the success or failure of a request. Common codes include:
+  -200: Success
+  -201: Resource created successfully
+  -400: Bad request
+  -404: Resource not found
+**Response body**: Contains the requested data in formats like JSON or XML.
 
-What does the RESTful API server response contain?
-REST principles require the server response to contain the following main components:
+Consider the GitHub API as an example:
 
-Status line
-The status line contains a three-digit status code that communicates request success or failure. For instance, 2XX codes indicate success, but 4XX and 5XX codes indicate errors. 
-3XX codes indicate URL redirection.
+-**https://docs.github.com/en/rest/users/users?apiVersion=2022-11-28** This URL represents the "users" resource.
 
-The following are some common status codes:
+-GET **https://docs.github.com/en/rest/users/users?apiVersion=2022-11-2**8 This request retrieves a list of all users.
 
-**200: Generic success response
-201: POST method success response
-400: Incorrect request that the server cannot process
-404: Resource not found**
-Message body
-The response body contains the resource representation. The server selects an appropriate representation format based on what the request headers contain. Clients can request information in XML or JSON formats, which define how the data is written in plain text. For example, if the client requests the name and age of a person named John, the server returns a JSON representation as follows:
+-POST **https://docs.github.com/en/rest/users/users?apiVersion=2022-11-28** This request creates a new user.
 
-'{"name":"John", "age":30}
+-**https://docs.github.com/en/rest/users/users?apiVersion=2022-11-2**8 This URL specifies a      single user with ID 1.
 
-CONCLUSION
-****URLs used Represent a resource, and they support creating, reading, updating, and deleting using https actions.****
-![image](https://github.com/MKPNJoanne/Basic-REST-API/assets/97240800/76b3296f-84f6-4db6-92af-69cc54a426cd)
+-GET **https://docs.github.com/en/rest/users/users?apiVersion=2022-11-28** This request          retrieves information about user 1.
+
+-PUT **https://docs.github.com/en/rest/users/users?apiVersion=2022-11-28** This request updates  user 1's information.
+
+-DELETE **https://docs.github.com/en/rest/users/users?apiVersion=2022-11-28** This request       deletes user 1.
+
+Bonus Resources:
+
+-**RESTful API Design:** https://restfulapi.net/
+-**REST Client Extension:**
+  https://marketplace.visualstudio.com/items?itemName=humao.rest-client
+
+**Let's embark on your journey to mastering REST APIs!**
