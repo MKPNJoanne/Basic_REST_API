@@ -1,0 +1,5 @@
+GET http://localhost:3000/example
+// seperating into two different requests
+
+###
+GET http://localhost:3000/example/15

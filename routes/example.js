@@ -1,13 +1,13 @@
 const express = require('express')
-const router= express.router()
+const router= express.Router()
 
 //Getting all resources
 router.get('/',(req, res) => {
-res.send('Hello World') // Send a string res(response ) in a format other than JSON 
+res.send('My name is Pramudi') // Send a string res(response ) in a format other than JSON 
 })
 //Getting one resource
 router.get('/:id',(req, res) => { //:id means parameter
-
+res.send(req.params.id) // Send a string res(response
 })
 //Creating one resource
 router.post('/',(req, res) => { 
