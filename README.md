@@ -1,5 +1,5 @@
 
-**Basic-REST-API: Learning the Fundamentals**
+**Basic-REST-API Node.js, Express, & MongoDB : Learning the Fundamentals**
 ![image](https://github.com/MKPNJoanne/Basic-REST-API/assets/97240800/6009bd1b-f332-4e1e-8300-22389fcab9e0)
 
 This  provides a comprehensive overview of REST APIs (Representational State Transfer), By understanding REST principles, you can effectively interact with various web services and build robust applications.
