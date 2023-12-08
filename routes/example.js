@@ -17,8 +17,8 @@ res.status(500).json({message: err.message})
 })
 
 //Getting one resource
-router.get('/:id',(req, res) => { //:id means parameter
-res.send(req.params.id) // Send a string res(response
+router.get('/:id',getExample,(req, res) => { //:id means parameter
+res.send(res.example.name) // Send a string res(response
 })
 
 
@@ -43,13 +43,25 @@ router.post('/', async (req, res) => {
 
 
 //Updating one resource
-router.patch('/:id ',(req, res) => { // if we use put then all of the information of the example will be upated
+router.patch('/:id ',getExample,(req, res) => { // if we use put then all of the information of the example will be upated
 
 })
 //Deleting one resource
-router.delete('/:id',(req, res) => { 
+router.delete('/:id',getExample,(req, res) => { 
 
 })
+  async function getExample(req, res, next) {
+    let example 
+    try{
+         example = await example.findById(req.params.id)
+        if (example ==null) return res.status(404).json({message: 'Cannot find example'})
+        }
+    catch (err) {
+        return res.status(500).json({message: err.message})
+    }
+    res.example = example
+    netx()
+ }
 
 module.exports =router
 

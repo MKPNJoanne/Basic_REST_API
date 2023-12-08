@@ -2,11 +2,13 @@ GET http://localhost:3000/example
 // seperating into two different requests
 
 ###
-GET http://localhost:3000/example/15
+GET http://localhost:3000/example/5cd4523659
 
 ###
 POST http://localhost:3000/example
+Content-Type: application/json 
 
+// informing that e are sending json data (make sure to keep a line above)
 {
     "name": "Pramudi",
     "sendingTo":"My admirer"
